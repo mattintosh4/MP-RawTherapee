@@ -86,7 +86,7 @@ sudo port install \
 	libsigcxx2
 ```
 
-gtkmm port maybe fail to install. Use `-s` (source mode) option.
+_gtkmm_ port maybe fail to install. Use `-s` (source mode) option.
 
 ```bash
 sudo port -s install gtkmm
