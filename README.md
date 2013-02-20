@@ -49,11 +49,11 @@ sudo port install
 
 ## Run ##
 
-### app bundle ###
+### App bundle ###
 
 Open `/Applications/MacPorts/RawTherapee.app` on Finder.
 
-### terminal ###
+### Terminal ###
 
 ```bash
 rawtherapee
@@ -61,7 +61,7 @@ rawtherapee
 /opt/local/bin/rawtherapee
 ```
 
-And you can directly open the image file.
+You can also directly open the image file.
 
 ```bash
 /opt/local/bin/rawtherapee <image file>
