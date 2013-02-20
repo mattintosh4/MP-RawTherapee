@@ -61,7 +61,7 @@ rawtherapee
 /opt/local/bin/rawtherapee
 ```
 
-#### Direct open ####
+And you can directly open the image file.
 
 ```bash
 /opt/local/bin/rawtherapee <image file>
@@ -114,7 +114,7 @@ rawtherapee
 /opt/local/bin/rawtherapee
 ```
 
-#### 画像の直接展開 ####
+画像を直接開くこともできます。
 
 ```bash
 rawtherapee <image file>
