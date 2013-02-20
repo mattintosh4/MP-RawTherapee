@@ -73,6 +73,25 @@ You can also directly open the image file.
 sudo port uninstall rawtherapee
 ```
 
+## How to use Quartz backend (native) ##
+
+MacPorts _gtk2_ port uses X11 backend by default. If you want to use Quartz backend (native), install following ports with variants options before installing rawtherapee.
+
+```bash
+sudo port install \
+	cairo +quartz -x11 \
+	pango +quartz -x11 \
+	gdk-pixbuf2 -x11 \
+	gtk2 +quartz \
+	libsigcxx2
+```
+
+gtkmm port maybe fail to install. Use `-s` (source mode) option.
+
+```bash
+sudo port -s install gtkmm
+```
+
 ***
 
 # 解説 #
@@ -124,4 +143,23 @@ rawtherapee <image file>
 
 ```bash
 sudo port uninstall rawtherapee
+```
+
+## Quartz バックエンドを使用するには (native) ##
+
+MacPorts の _gtk2_ ポートは標準で X11 バックエンドを使用します。もし Quartz バックエンドを使用したい場合は RawTherapee をインストールする前に以下のポートをバリアントオプションを併用してインストールして下さい。
+
+```bash
+sudo port install \
+	cairo +quartz -x11 \
+	pango +quartz -x11 \
+	gdk-pixbuf2 -x11 \
+	gtk2 +quartz \
+	libsigcxx2
+```
+
+_gtkmm_ ポートはバイナリモードの場合、インストールに失敗する可能性があります。`-s` オプション（ソースモード）を使用して下さい。
+
+```bash
+sudo port -s install gtkmm
 ```
