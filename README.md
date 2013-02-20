@@ -32,7 +32,7 @@ Download Portfile or clone this repository. Run `sudo port install` on terminal.
 
 ### download ###
 
-```sh
+```bash
 mkdir build
 cd build
 curl -O https://raw.github.com/mattintosh4/MP-RawTherapee/master/Portfile
@@ -41,7 +41,7 @@ sudo port install
 
 ### git clone ###
 
-```sh
+```bash
 git clone git://github.com/mattintosh4/MP-RawTherapee.git
 cd MP-RawTherapee
 sudo port install
@@ -55,7 +55,7 @@ Open `/Applications/MacPorts/RawTherapee.app` on Finder.
 
 ### terminal ###
 
-```sh
+```bash
 rawtherapee
 # OR
 /opt/local/bin/rawtherapee
@@ -63,13 +63,13 @@ rawtherapee
 
 #### Direct open ####
 
-```sh
+```bash
 /opt/local/bin/rawtherapee <image file>
 ```
 
 ## Uninstall ##
 
-```sh
+```bash
 sudo port uninstall rawtherapee
 ```
 
@@ -85,7 +85,7 @@ Portfile をダウンロードするか、このリポジトリを複製して�
 
 ### ダウンロードを利用する場合 ###
 
-```sh
+```bash
 mkdir build
 cd build
 curl -O https://raw.github.com/mattintosh4/MP-RawTherapee/master/Portfile
@@ -94,7 +94,7 @@ sudo port install
 
 ### git clone を利用する場合 ###
 
-```sh
+```bash
 git clone git://github.com/mattintosh4/MP-RawTherapee.git
 cd MP-RawTherapee
 sudo port install
@@ -108,7 +108,7 @@ Finder で `/Applications/MacPorts/RawTherapee.app` を実行して下さい。
 
 ### ターミナルによる起動 ###
 
-```sh
+```bash
 rawtherapee
 # もしくは
 /opt/local/bin/rawtherapee
@@ -116,12 +116,12 @@ rawtherapee
 
 #### 画像の直接展開 ####
 
-```sh
+```bash
 rawtherapee <image file>
 ```
 
 ## アンインストール ##
 
-```sh
+```bash
 sudo port uninstall rawtherapee
 ```
