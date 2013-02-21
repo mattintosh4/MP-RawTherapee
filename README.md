@@ -227,8 +227,6 @@ set build_type RELEASE
 
 デフォルトは 2 です。この番号は `-march=native` フラグを追加します。もしターゲットプロセッサを変更したい場合は `proc_target` 変数の値を変更して下さい。
 
-Default is number 2. This number add `-march=native` flags. If you want to change the processor target, edit value of `proc_target` variable.
-
 - 0: none
 - 1: -mtune=generic
 - 2: -march=native
