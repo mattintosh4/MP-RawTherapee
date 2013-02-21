@@ -81,21 +81,16 @@ configure.post_args         ${worksrcpath}
 build.target                install
 
 destroot {
-    # doc
+    # pdf manual
     set doc_dir ${destroot}${prefix}/share/doc/${name}
     xinstall -d ${doc_dir}
-    xinstall -m 0644 ${worksrcpath}/doc/RawTherapeeManual_en.pdf \
-                     ${doc_dir}
+    xinstall -m 0644  ${worksrcpath}/doc/RawTherapeeManual_en.pdf \
+                      ${doc_dir}
     
     # man
-    xinstall -m 0644 ${worksrcpath}/doc/manpage/${name}.1 \
-                     ${destroot}${prefix}/share/man/man1
+    xinstall -m 0644  ${worksrcpath}/doc/manpage/${name}.1 \
+                      ${destroot}${prefix}/share/man/man1
     file delete -force ${origin}/share/man
-    
-    # executable loader
-    system "printf '#!/bin/bash\nDYLD_LIBRARY_PATH=%s %s \"$@\"\n' ${prefix}/lib/gcc47 ${prefix}/libexec/${distname}/${name} > ${name}"
-    xinstall -m 0755 ${name} \
-                     ${destroot}${prefix}/bin
     
     # app
     set app_contents  ${destroot}${applications_dir}/RawTherapee.app/Contents
@@ -108,6 +103,9 @@ destroot {
     xinstall -m 0644  ${worksrcpath}/tools/osx/Info.plist \
                       ${app_contents}
     reinplace "s|<string>start</string>|<string>${name}</string>|" ${app_contents}/Info.plist
-    xinstall -m 0755  ${name} \
-                      ${app_macos}
+    
+    # executable loader
+    system "printf '#!/bin/bash\nDYLD_LIBRARY_PATH=%s %s \"$@\"\n' ${prefix}/lib/gcc47 ${prefix}/libexec/${distname}/${name} > ${name}"
+    xinstall -m 0755  ${name} ${destroot}${prefix}/bin
+    xinstall -m 0755  ${name} ${app_macos}
 }
