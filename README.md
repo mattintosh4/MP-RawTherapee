@@ -2,7 +2,7 @@
 
 This is the private Portfile for installing RawTherapee by MacPorts.
 
-# File layout #
+# Destination #
 
 ```
 /Applications/
@@ -32,6 +32,15 @@ This is the private Portfile for installing RawTherapee by MacPorts.
           rawtherapee.1
 ```
 
+# Launcher details #
+
+```bash
+#!/bin/bash
+DYLD_LIBRARY_PATH=/opt/local/lib/gcc47 /opt/local/libexec/rawtherapee-4.0.9/rawtherapee "$@"
+```
+
+# How to use Portfile #
+
 ## Install ##
 
 Download Portfile or clone this repository. Run `sudo port install` on terminal. If you download Portfile, recommend to make work directory.
@@ -55,15 +64,19 @@ sudo port install
 
 ## Run ##
 
-### App bundle ###
+### From app bundle ###
 
 Open `/Applications/MacPorts/RawTherapee.app` on Finder.
 
-### Terminal ###
+### From terminal ###
 
 ```bash
 rawtherapee
-# OR
+```
+
+or
+
+```bash
 /opt/local/bin/rawtherapee
 ```
 
@@ -96,6 +109,32 @@ _gtkmm_ port maybe fail to install. Use `-s` (source mode) option.
 
 ```bash
 sudo port -s install gtkmm
+```
+
+## How to change the build type and processor target ##
+
+### Build type ###
+
+Default is "RELWITHDEBINFO". This type add "-O2 -g -DNDEBUG" flags. If you want to change the build type, edit value of "build_type" variable.
+
+```tcl
+#set build_type RELWITHDEBINFO
+set build_type RELEASE
+```
+
+### Processor target ###
+
+Default is number 2. This number add "-march=native" flags. If you want to change the processor target, edit value of "proc_target" variable.
+
+- 0: none
+- 1: -mtune=generic
+- 2: -march=native
+- 5: -march=core2
+- 6: -march=corei7
+
+```tcl
+#set proc_target 2
+set proc_target 1
 ```
 
 ***
@@ -135,7 +174,10 @@ Finder で `/Applications/MacPorts/RawTherapee.app` を実行して下さい。
 
 ```bash
 rawtherapee
-# もしくは
+```
+もしくは
+
+```bash
 /opt/local/bin/rawtherapee
 ```
 
