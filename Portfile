@@ -5,14 +5,7 @@
 # RawTherapee install Portfile (2013-02-20)
 # ------------------------------------------------------
 # Copyright (c) 2013 mattintosh4
-# https://github.com/mattintosh4/RawTherapee
-# 
-# Destination
-# -----------
-# - Core files: ${prefix}/libexec/rawtherapee-4.0.9/
-# - Executable launcher: ${prefix}/bin/rawtherapee
-# - App launcher: ${applications_dir}/RawTherapee.app
-# - PDF Manual: ${prefix}/share/doc/rawtherapee/
+# https://github.com/mattintosh4/MP-RawTherapee
 
 PortSystem                  1.0
 platforms                   darwin
