@@ -211,3 +211,31 @@ _gtkmm_ ポートはバイナリモードの場合、インストールに失敗
 ```bash
 sudo port -s install gtkmm
 ```
+
+## ビルドタイプとターゲットプロセッサの変更について ##
+
+### ビルドタイプ ###
+
+デフォルトは `RELWITHDEBINFO` です。このタイプは `-O2 -g -DNDEBUG` フラグを追加します。もしビルドタイプを変更したい場合は `build_type` 変数の値を変更して下さい。
+
+```tcl
+#set build_type RELWITHDEBINFO
+set build_type RELEASE
+```
+
+### ターゲットプロセッサ ###
+
+デフォルトは 2 です。この番号は `-march=native` フラグを追加します。もしターゲットプロセッサを変更したい場合は `proc_target` 変数の値を変更して下さい。
+
+Default is number 2. This number add `-march=native` flags. If you want to change the processor target, edit value of `proc_target` variable.
+
+- 0: none
+- 1: -mtune=generic
+- 2: -march=native
+- 5: -march=core2
+- 6: -march=corei7
+
+```tcl
+#set proc_target 2
+set proc_target 1
+```
