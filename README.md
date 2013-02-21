@@ -115,7 +115,7 @@ sudo port -s install gtkmm
 
 ### Build type ###
 
-Default is "RELWITHDEBINFO". This type add "-O2 -g -DNDEBUG" flags. If you want to change the build type, edit value of "build_type" variable.
+Default is `RELWITHDEBINFO`. This type add `-O2 -g -DNDEBUG` flags. If you want to change the build type, edit value of `build_type` variable.
 
 ```tcl
 #set build_type RELWITHDEBINFO
@@ -124,7 +124,7 @@ set build_type RELEASE
 
 ### Processor target ###
 
-Default is number 2. This number add "-march=native" flags. If you want to change the processor target, edit value of "proc_target" variable.
+Default is number 2. This number add `-march=native` flags. If you want to change the processor target, edit value of `proc_target` variable.
 
 - 0: none
 - 1: -mtune=generic
