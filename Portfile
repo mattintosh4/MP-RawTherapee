@@ -110,11 +110,11 @@ destroot {
     set app_resources ${app_contents}/Resources
     xinstall -d ${app_macos} \
                 ${app_resources}
-    copy ${worksrcpath}/tools/osx/Icons.icns \
-         ${app_resources}
-    copy ${worksrcpath}/tools/osx/Info.plist \
-         ${app_contents}
+    xinstall -m 0644  ${worksrcpath}/tools/osx/Icons.icns \
+                      ${app_resources}
+    xinstall -m 0644  ${worksrcpath}/tools/osx/Info.plist \
+                      ${app_contents}
     reinplace "s|<string>start</string>|<string>${name}</string>|" ${app_contents}/Info.plist
-    xinstall -m 0755 ${name} \
-                     ${app_macos}
+    xinstall -m 0755  ${name} \
+                      ${app_macos}
 }
