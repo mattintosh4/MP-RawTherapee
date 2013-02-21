@@ -8,6 +8,12 @@ This is the private Portfile for installing RawTherapee by MacPorts.
 /Applications/
   MacPorts/
     RawTherapee.app
+      Info.plist
+      Contents/
+        MacOS/
+          rawtherapee (Launcher)
+        Resources/
+          Icons.icns
 
 /opt/
   local/
@@ -15,7 +21,7 @@ This is the private Portfile for installing RawTherapee by MacPorts.
       rawtherapee (Launcher)
     libexec/
       rawtherapee-4.0.9/
-        rawtherapee
+        rawtherapee (Original executable)
         other resources
     share/
       doc/
@@ -26,7 +32,7 @@ This is the private Portfile for installing RawTherapee by MacPorts.
           rawtherapee.1
 ```
 
-## How to install RawTherapee ##
+## Install ##
 
 Download Portfile or clone this repository. Run `sudo port install` on terminal. If you download Portfile, recommend to make work directory.
 
