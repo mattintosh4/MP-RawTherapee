@@ -103,6 +103,8 @@ destroot {
     xinstall -m 0644  ${worksrcpath}/tools/osx/Info.plist \
                       ${app_contents}
     reinplace "s|<string>start</string>|<string>${name}</string>|" ${app_contents}/Info.plist
+    reinplace "s|<string>3.0 Alpha</string>|<string>4.0.9</string>|" ${app_contents}/Info.plist
+    reinplace "s|<string>3.0a</string>|<string>4.0</string>|" ${app_contents}/Info.plist
     
     # executable loader
     system "printf '#!/bin/bash\nDYLD_LIBRARY_PATH=%s %s \"$@\"\n' ${prefix}/lib/gcc47 ${prefix}/libexec/${distname}/${name} > ${name}"
