@@ -7,7 +7,7 @@ This is the private Portfile for installing RawTherapee by MacPorts.
 ```
 /Applications/
   MacPorts/
-    RawTherapee.app
+    RawTherapee.app/
       Info.plist
       Contents/
         MacOS/
